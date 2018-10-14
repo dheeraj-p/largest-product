@@ -7,9 +7,7 @@ const calculateLargestProduct = function (number, numberOfAdjacentDigits){
     for(let index = digitCount; index < digitCount + numberOfAdjacentDigits; index++){
       currentProduct = currentProduct * digits[index];
     }
-    if(currentProduct > largestProduct){
-      largestProduct = currentProduct;
-    }
+      largestProduct = Math.max(currentProduct,largestProduct);
   }
   return largestProduct;
 }
